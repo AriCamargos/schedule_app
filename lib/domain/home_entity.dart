@@ -14,4 +14,12 @@ class HomePage extends Equatable {
         title,
         image,
       ];
+
+  @override
+  String toString() {
+    return '$runtimeType:{'
+        '\ttitle: title\n'
+        '\timage: image\n'
+        '}';
+  }
 }

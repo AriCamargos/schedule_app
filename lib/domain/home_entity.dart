@@ -1,12 +1,12 @@
 import 'package:equatable/equatable.dart';
 
-class HomePage extends Equatable {
-  final String title;
-  final String image;
+class HomePageEntity extends Equatable {
+  final String? title;
+  final String? image;
 
-  const HomePage({
-    required this.title,
-    required this.image,
+  const HomePageEntity({
+    this.title,
+    this.image,
   });
 
   @override
@@ -15,11 +15,13 @@ class HomePage extends Equatable {
         image,
       ];
 
-  @override
-  String toString() {
-    return '$runtimeType:{'
-        '\ttitle: title\n'
-        '\timage: image\n'
-        '}';
+  HomePageEntity copyWith({
+    String? title,
+    String? image,
+  }) {
+    return HomePageEntity(
+      title: title ?? this.title,
+      image: image ?? this.image,
+    );
   }
 }

@@ -2,11 +2,13 @@ import 'package:equatable/equatable.dart';
 
 class HomePageEntity extends Equatable {
   final String? title;
+  final String? subtitle;
   final String? image;
 
   const HomePageEntity({
     this.title,
     this.image,
+    this.subtitle,
   });
 
   @override
